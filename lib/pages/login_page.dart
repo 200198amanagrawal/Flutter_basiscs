@@ -1,12 +1,14 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/utils/routes.dart';
 
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      //here we're using the concept of children where a coulmn will have everydata in a column format
+        //here we're using the concept of children where a coulmn will have everydata in a column format
+        child: SingleChildScrollView(
       child: Column(children: [
         Image.asset(
           "assets/images/login_image.png",
@@ -40,15 +42,15 @@ class LoginPage extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  print("Hello world");
+                  Navigator.pushNamed(context, MyRoutes.homeRoute);
                 },
                 child: Text("Login"),
-                style: TextButton.styleFrom(),
+                style: TextButton.styleFrom(minimumSize: Size(150, 40)),
               )
             ],
           ),
         )
       ]),
-    );
+    ));
   }
 }
