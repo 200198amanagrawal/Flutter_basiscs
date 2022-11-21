@@ -8,6 +8,7 @@ void main() {
   runApp(MyApp()); // runApp Method which runs the main app
 }
 
+//statles means the page is static with no change to show
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
