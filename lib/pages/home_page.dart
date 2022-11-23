@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -17,7 +18,7 @@ class HomePage extends StatelessWidget {
           child: Text(
               "Welcome to $days of $name"), // in flutter the ${varname} basically uses the variable similar to + in java
         )), //Body will serve as the middle element
-        drawer: Drawer(), // Footer of the Scaffold
+        drawer: MyDrawer(), // Footer of the Scaffold
       ),
     );
   }
