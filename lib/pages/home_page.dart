@@ -29,10 +29,10 @@ class _HomePageState extends State<HomePage> {
     await Future.delayed(Duration(
         seconds:
             2)); // this is added for one progress bar delay and no initialization error in list
-    // final catalogJson =
-    //     await rootBundle.loadString("assets/files/catalog.json");
-    final response = await http.get(Uri.parse(url));
-    final catalogJson = response.body;
+    final catalogJson =
+        await rootBundle.loadString("assets/files/catalog.json");
+    // final response = await http.get(Uri.parse(url));
+    // final catalogJson = response.body;
     final decodedData = jsonDecode(catalogJson);
     var productsData = decodedData["products"];
     CatalogModel.items = List.from(productsData)
